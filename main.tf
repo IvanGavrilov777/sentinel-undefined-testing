@@ -5,7 +5,9 @@
 data "template_file" "bm-aws-ue1-p1-ldzshs-pl-test-01" {
   template = file(join("", ["./policy.json.tpl"]))
 }
-
+locals {
+  template = data.template_file.bm-aws-ue1-p1-ldzshs-pl-test-01.rendered
+}
 module "bm-aws-ue1-p1-ldzshs-pl-test-01" {
   source              = "./pesho"
   iam_policy_create   = true
@@ -28,7 +30,8 @@ module "bm-aws-ue1-p1-ldzshs-pl-test-01" {
   #     },
   #   ]
   # })
-  policy = data.template_file.bm-aws-ue1-p1-ldzshs-pl-test-01.rendered
+  policy = local.template
+  depends_on = [ locals ]
 }
 #123
 # terraform {
