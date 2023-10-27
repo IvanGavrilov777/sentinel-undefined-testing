@@ -19,11 +19,11 @@ module "bm-aws-ue1-p1-ldzshs-pl-test-01" {
   policy              = data.template_file.bm-aws-ue1-p1-ldzshs-pl-test-01.rendered
 }
 
-terraform {
-    cloud {
-        organization = "healthy-organ"
-        workspaces {
-          name = "sentinel-undefined-testing"
-        }
-    }
-}
+# terraform {
+#     cloud {
+#         organization = "healthy-organ"
+#         workspaces {
+#           name = "sentinel-undefined-testing"
+#         }
+#     }
+# }
