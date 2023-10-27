@@ -18,19 +18,19 @@ module "bm-aws-ue1-p1-ldzshs-pl-test-01" {
     deployment_type   = "terraform"
     owner             = "team_owner"
   }
-  # policy              = jsonencode({
-  #   Version = "2012-10-17"
-  #   Statement = [
-  #     {
-  #       Action = [
-  #         "ec2:Describe*",
-  #       ]
-  #       Effect   = "Allow"
-  #       Resource = "*"
-  #     },
-  #   ]
-  # })
-  policy = local.template
+  policy              = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = [
+          "ec2:Describe*",
+        ]
+        Effect   = "Allow"
+        Resource = "*"
+      },
+    ]
+  })
+  #policy = local.template
 
 }
 #123
