@@ -31,7 +31,7 @@ module "bm-aws-ue1-p1-ldzshs-pl-test-01" {
   #   ]
   # })
   policy = local.template
-  depends_on = [ locals ]
+
 }
 #123
 # terraform {
