@@ -10,3 +10,4 @@ variable "policy_name" {}
 variable "policy_description" {}
 variable "policy" {}
 variable "policy_tags" {}
+variable "iam_policy_create" {}
