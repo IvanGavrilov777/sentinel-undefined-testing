@@ -18,6 +18,8 @@ module "bm-aws-ue1-p1-ldzshs-pl-test-01" {
     deployment_type   = "terraform"
     owner             = "team_owner"
   }
+policy = data.template_file.bm-aws-ue1-p1-ldzshs-pl-test-01.rendered
+/*
   policy              = jsonencode({
     Version = "2012-10-17"
     Statement = [
@@ -30,6 +32,7 @@ module "bm-aws-ue1-p1-ldzshs-pl-test-01" {
       },
     ]
   })
+*/
   #policy = local.template
 
 }
